@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &169809105 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 586806889771866366, guid: e94733df97fd0844dafcfac39d243ab7, type: 3}
-  m_PrefabInstance: {fileID: 586806889669823535}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &247593884
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +182,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1877421549
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -4963,7 +4958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362bd69cc85ef640be2d2745fe2b3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 169809105}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,7 +5214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362bd69cc85ef640be2d2745fe2b3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 169809105}
 --- !u!199 &695477001
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5261,7 +5254,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1877421549
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14183,7 +14176,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 4.2544403}
+  m_Offset: {x: -0.70757675, y: 4.2544403}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14194,7 +14187,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 1.4911194}
+  m_Size: {x: 43.128105, y: 1.4911194}
   m_EdgeRadius: 0
 --- !u!1 &1915029673
 GameObject:
