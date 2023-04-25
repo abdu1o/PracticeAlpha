@@ -14,7 +14,7 @@ TagManager:
   - UI
   - Player
   - Post Pocessing
-  - 
+  - HUD
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2054272501
+    locked: 0
+  - name: HUD
+    uniqueID: 717766913
     locked: 0
