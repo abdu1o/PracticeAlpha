@@ -54,8 +54,8 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 0.47849652
-          outSlope: 0.47849652
+          inSlope: 0.5827907
+          outSlope: 0.5827907
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -235,10 +235,10 @@ MonoBehaviour:
     m_Value: 2
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 5
   gaussianMaxRadius:
     m_OverrideState: 1
     m_Value: 0.5
@@ -250,10 +250,10 @@ MonoBehaviour:
     m_Value: 10
   aperture:
     m_OverrideState: 1
-    m_Value: 25
+    m_Value: 24
   focalLength:
     m_OverrideState: 1
-    m_Value: 190
+    m_Value: 187
   bladeCount:
     m_OverrideState: 1
     m_Value: 3
@@ -350,16 +350,16 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 2.5
+    m_Value: 10
   scatter:
     m_OverrideState: 1
     m_Value: 0.5
   clamp:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 65703.98
   tint:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
@@ -391,7 +391,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: -1
+    m_Value: -0.3
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -425,11 +425,6 @@ MonoBehaviour:
   - {fileID: 5300804865461115051}
   - {fileID: -1715350589250867735}
   - {fileID: -2332661282563114858}
-  - {fileID: 7825420405746534303}
-  - {fileID: -8380104332876108778}
-  - {fileID: 6206929109141135169}
-  - {fileID: -3992984415269914155}
-  - {fileID: 7423764919829566777}
 --- !u!114 &3940389106843153150
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -451,10 +446,10 @@ MonoBehaviour:
     m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.749
   clamp:
     m_OverrideState: 1
-    m_Value: 0.15
+    m_Value: 0.05
 --- !u!114 &5300804865461115051
 MonoBehaviour:
   m_ObjectHideFlags: 3
