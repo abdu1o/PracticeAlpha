@@ -8,6 +8,7 @@ public class StatsControl : MonoBehaviour
     public int health; 
 
     public HealthBar health_bar;
+    public UnityEngine.Rendering.Universal.Light2D light2D;
 
     void Start() 
     {
@@ -21,6 +22,11 @@ public class StatsControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(10);
+        }
+
+        if(health <= 0)
+        {
+            Destroy(light2D);
         }
     }
 
