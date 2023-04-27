@@ -907,6 +907,7 @@ GameObject:
   - component: {fileID: 1969071299581854289}
   - component: {fileID: 586806889771866365}
   - component: {fileID: 586806889771866359}
+  - component: {fileID: 103794773075099234}
   - component: {fileID: 586806889771866360}
   - component: {fileID: 586806889771866362}
   - component: {fileID: 586806889771866364}
@@ -950,7 +951,6 @@ MonoBehaviour:
   max_health: 100
   health: 0
   health_bar: {fileID: 0}
-  light2D: {fileID: 0}
 --- !u!114 &586806889771866365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,6 +979,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 586806889771866360}
   delay: 0.25
+--- !u!114 &103794773075099234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586806889771866366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfe90584e5fa49439887908771cffdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenade: {fileID: 4887614885627677759, guid: 3176fda367e880a4bb28e4eaf0e36bb9, type: 3}
 --- !u!95 &586806889771866360
 Animator:
   serializedVersion: 5
