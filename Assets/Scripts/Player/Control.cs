@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Control : MonoBehaviour
@@ -53,5 +54,14 @@ public class Control : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        if (other.name == "Sparks")
+        {
+            StatsControl stats = GetComponentInParent<StatsControl>();
+            stats.health -= 5;
+        }
     }
 }
