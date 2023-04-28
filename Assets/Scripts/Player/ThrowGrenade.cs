@@ -9,6 +9,7 @@ public class ThrowGrenade : MonoBehaviour
     public float throwTime = 5.0f;
 
     private bool allowThrow = true;
+    public GameObject grenadeCreated;
 
     void Start()
     {
@@ -33,6 +34,8 @@ public class ThrowGrenade : MonoBehaviour
             obj.GetComponent<ExplosionGrenade>().mousePos = mousePos;
 
             allowThrow = false;
+            grenadeCreated = obj;
+
             StartCoroutine(WaitForThrow());
         }
 

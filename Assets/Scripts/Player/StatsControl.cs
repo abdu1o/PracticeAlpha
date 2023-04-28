@@ -24,7 +24,7 @@ public class StatsControl : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         health_bar.SetHealth(health);
