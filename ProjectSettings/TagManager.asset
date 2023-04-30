@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Enemy
+  - Solid
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - Player
   - Post Pocessing
   - HUD
-  - 
-  - 
+  - Enemy
+  - EnemyBullet
   - 
   - 
   - 
@@ -47,6 +49,9 @@ TagManager:
     locked: 0
   - name: Front Ground
     uniqueID: 2417545747
+    locked: 0
+  - name: Enemy
+    uniqueID: 2989880631
     locked: 0
   - name: Player
     uniqueID: 2054272501
