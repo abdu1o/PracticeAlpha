@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StatsControl : MonoBehaviour
 {
@@ -8,19 +9,30 @@ public class StatsControl : MonoBehaviour
     public int health; 
 
     public HealthBar health_bar;
+    public Rigidbody2D rb;
 
     void Start() 
     {
+        rb = GetComponent<Rigidbody2D>();
         health = max_health;
         health_bar.SetMaxHealth(max_health);
     }
 
-    //just for tests
     void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (health <= 0)
         {
-            TakeDamage(10);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Bullet"))
+        {
+            rb.isKinematic = true;
+            TakeDamage(5);
+            Destroy(collision.gameObject);
         }
     }
 
