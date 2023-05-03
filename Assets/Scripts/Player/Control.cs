@@ -53,7 +53,7 @@ public class Control : MonoBehaviour
         // Добавления ограничения по оси Y
         Vector2 newPosition = rb.position + moveVelocity * Time.fixedDeltaTime;
         newPosition.y = Mathf.Clamp(newPosition.y, -3.5f, 3.5f);
-        rb.MovePosition(newPosition);
+        rb.MovePosition(newPosition); 
     }
 
     void Flip()
