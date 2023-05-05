@@ -4,39 +4,51 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
-    public Transform player; // ссылка на Transform игрока
-    public float moveSpeed = 3f; // скорость движения врага
-    public float maxDistance = 5f; // максимальная дистанция, на которой враг может находиться от игрока
+    public Transform player;
+    private bool facingRight = true;
+    public float moveSpeed = 3f;
+    public float maxDistance = 5f;
 
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer; // ссылка на компонент SpriteRenderer
-
-    private void Start()
+    private SpriteRenderer spriteRenderer;
+    public Transform flippedTransform;
+    private Transform flippedPart;
+ 
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+ 
+        // Найти дочерний объект "flippedPart"
+        flippedPart = transform.Find("flippedPart");
     }
 
     private void FixedUpdate()
     {
-        // Вычисляем направление к игроку
         Vector2 direction = (player.position - transform.position).normalized;
 
-        // Если дистанция до игрока больше максимальной дистанции, то движемся в направлении игрока
         if (Vector2.Distance(transform.position, player.position) > maxDistance)
         {
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
         }
 
-        // Поворачиваем врага, если он движется вправо
-        if (direction.x > 0)
+        if (direction.x > 0 && facingRight)
         {
-            transform.localScale = new Vector3(-1, 1, 1); // разворачиваем спрайт по оси X
+            Flip();
         }
-        else
+        else if (direction.x < 0 && !facingRight)
         {
-            transform.localScale = new Vector3(1, 1, 1); // возвращаем спрайт в исходное положение
+            Flip();
         }
     }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = flippedPart.localScale;
+        Scaler.x *= -1;
+        flippedPart.localScale = Scaler;
+    }
+
 
 }

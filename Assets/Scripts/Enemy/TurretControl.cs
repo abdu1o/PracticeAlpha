@@ -12,7 +12,7 @@ public class TurretControl : MonoBehaviour
 
     public float bulletForce = 20f;
     public float bulletLifetime = 2f;
-    public float shootingDelay = 0.4f; // Задержка перед выстрелом
+    public float shootingDelay = 0.4f;
 
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
@@ -33,14 +33,7 @@ public class TurretControl : MonoBehaviour
     {
         Vector2 direction = player.position - turret.position;
 
-        if (direction.x > 0)
-        {
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        }
-        else
-        {
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f;
-        }
+        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f;
 
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         turret.rotation = Quaternion.Slerp(turret.rotation, rotation, rotationSpeed * Time.deltaTime);
@@ -52,24 +45,15 @@ public class TurretControl : MonoBehaviour
         }
     }
 
-    void Shoot()
+     void Shoot()
     {
         animator.SetTrigger(shootingAnimationTrigger);
         Vector2 direction = (player.position - transform.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
-        if (direction.x > 0)
-        {   
-            bullet.transform.Rotate(0f, 0f, 90f);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(bulletSpawnPoint.right * bulletForce, ForceMode2D.Impulse);
-        }
-        else
-        {
-            bullet.transform.Rotate(0f, 0f, 270f);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(-bulletSpawnPoint.right * bulletForce, ForceMode2D.Impulse);
-        }
+        bullet.transform.Rotate(0f, 0f, 270f);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(-bulletSpawnPoint.right * bulletForce, ForceMode2D.Impulse);
 
         Destroy(bullet, bulletLifetime);
 
