@@ -879,11 +879,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 30e69940-0307-4a21-89d1-d2f0d0a5a89e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: PracticeAlpha
+  organizationId: abdu1o
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
